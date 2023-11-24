@@ -39,13 +39,13 @@ void shell_sort(int list[], int n, int a)   // n = size
 			for (i = 0; i < gap; i++)		// 부분 리스트의 개수는 gap
 				inc_insertion_sort(list, i, n - 1, gap);
 			
-			if (a == 0) {
+			 
 				for (i = 0; i < n; i++) {
 					
 					printf("%d ", list[i]);
 				}
 				printf("\n");
-			}
+			
 		}	
 
 		
@@ -64,13 +64,13 @@ int main(void)
 		for (i = 0; i < n; i++) {    	// 난수 생성 및 출력 
 			list[i] = rand() % 100;
 		}
-		if (a == 0) { // 전체 한번만 출력
-			printf("Original List\n");
+		
+			printf("\nOriginal List %d\n", a+1);
 			for (i = 0; i < n; i++) {
 				printf("%d ", list[i]);
 			}
 			printf("\n\n");
-		}
+		
 	
 		shell_sort(list, n, a);
 	 
